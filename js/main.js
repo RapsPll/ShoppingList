@@ -10,7 +10,8 @@ const sectionMain = document.querySelector('.main');
 const popUpSearch = document.querySelector('.popUp__search');
 const form = document.querySelector('.search__form');
 const fieldToSearchProduct = document.querySelector('.search__form--input');
-
+const catalogButton = document.querySelector('.catalog__button');
+const productDatabase = document.querySelector('.productDatabase')
 const ActivePopUp = () => {
     popUp.classList.add('active');
     WindowPopUp.classList.add('active');
@@ -27,6 +28,10 @@ const ClosePopUp = () => {
     popUpSearch.classList.remove('active');
 };
 
+const showCatalogProducts = () => {
+    productDatabase.classList.toggle('showed')
+}
+
 const searchProduct = fieldToSearchProduct.value;
 
 const onFormSubmit = (e) => {
@@ -36,6 +41,7 @@ const init = () => {
 form.addEventListener('submit', onFormSubmit);
 buttonClosePopUp.addEventListener('click', ClosePopUp);
 buttonAddNewTask.addEventListener('click', ActivePopUp);
+catalogButton.addEventListener('click', showCatalogProducts);
 };
 
 init();

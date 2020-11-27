@@ -1,0 +1,54 @@
+.catalog__button {
+    border: none;
+    background-color: green;
+    padding: 10px 15px;
+    margin: 10px 30px;
+    color: white;
+    font-size: 16px;
+}
+
+.productDatabase {
+    position: absolute;
+    left: 2px;
+    background-color: white;
+    border-right: 0px solid green;
+    border-bottom: 0px solid green;
+    padding: 0px 30px;
+    height: 0px;
+    overflow-y: hidden;
+    transition: .3s linear;
+}
+
+.productDatabase.showed {
+    height: 700px;
+    padding: 10px 30px;
+    border-right: 2px solid green;
+    border-bottom: 2px solid green;
+    transition: .3s linear;
+}
+
+.popUp__productDatabase {
+    width: 300px;
+
+}
+
+.productDatabase__category {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom: 1px solid green;
+    list-style: none;
+    cursor: pointer;
+}
+
+.category__product {
+    display: none;
+}
+
+.productDatabase::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 88, 0);
+    border-radius: 20px;
+}

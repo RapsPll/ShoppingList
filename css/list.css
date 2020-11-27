@@ -65,6 +65,7 @@
 
 .listElement__button--restore {
     font-weight: bold;
+    margin-right: 5px;
     color: red;
 }
 
