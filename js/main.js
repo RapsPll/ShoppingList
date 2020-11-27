@@ -7,7 +7,9 @@ const buttonClosePopUp = document.querySelector('.closePopUp');
 const popUp = document.querySelector('.popUp');
 const WindowPopUp = document.querySelector('.mainWindowPopUp');
 const sectionMain = document.querySelector('.main');
-const popUpSearch = document.querySelector('.popUp__search')
+const popUpSearch = document.querySelector('.popUp__search');
+const form = document.querySelector('.search__form');
+const fieldToSearchProduct = document.querySelector('.search__form--input');
 
 const ActivePopUp = () => {
     popUp.classList.add('active');
@@ -25,6 +27,15 @@ const ClosePopUp = () => {
     popUpSearch.classList.remove('active');
 };
 
-buttonClosePopUp.addEventListener('click', ClosePopUp);
+const searchProduct = fieldToSearchProduct.value;
 
+const onFormSubmit = (e) => {
+    e.preventDefault();
+};
+const init = () => {
+form.addEventListener('submit', onFormSubmit);
+buttonClosePopUp.addEventListener('click', ClosePopUp);
 buttonAddNewTask.addEventListener('click', ActivePopUp);
+};
+
+init();
