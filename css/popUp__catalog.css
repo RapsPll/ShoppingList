@@ -15,12 +15,12 @@
     border-bottom: 0px solid green;
     padding: 0px 30px;
     height: 0px;
-    overflow-y: hidden;
+    overflow-y: scroll;
     transition: .3s linear;
 }
 
 .productDatabase.showed {
-    height: 700px;
+    height: 500px;
     padding: 10px 30px;
     border-right: 2px solid green;
     border-bottom: 2px solid green;
@@ -35,9 +35,22 @@
 .productDatabase__category {
     padding-bottom: 5px;
     padding-top: 5px;
+    padding-left: 5px;
     border-bottom: 1px solid green;
     list-style: none;
     cursor: pointer;
+}
+
+.productDatabase__category:hover {
+    background-color: green;
+    color: white;
+}
+
+.category__products {
+    position: absolute;
+    top: 50px;
+    left: 300px;
+    list-style: none;
 }
 
 .category__product {
