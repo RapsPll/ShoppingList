@@ -1,3 +1,8 @@
+.popUp__productDatabase {
+    position: relative;
+    width: 300px;
+}
+
 .catalog__button {
     border: none;
     background-color: green;
@@ -8,7 +13,7 @@
 }
 
 .productDatabase {
-    position: absolute;
+    position: relative;
     left: 2px;
     background-color: white;
     border-right: 0px solid green;
@@ -27,35 +32,56 @@
     transition: .3s linear;
 }
 
-.popUp__productDatabase {
-    width: 300px;
 
-}
 
 .productDatabase__category {
+    list-style: none;
+}
+
+.category__productsTitle {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: green;
+    font-size: 20px;
     padding-bottom: 5px;
     padding-top: 5px;
     padding-left: 5px;
     border-bottom: 1px solid green;
-    list-style: none;
-    cursor: pointer;
 }
 
-.productDatabase__category:hover {
+.category__productsTitle:hover {
     background-color: green;
     color: white;
 }
 
+.category__productsTitle.show + .category__products {
+    display: block;
+}
+
 .category__products {
-    position: absolute;
-    top: 50px;
-    left: 300px;
+    /* position: absolute;
+    left: 115%; */
+    display: none;
+}
+
+
+.category__product {
+    padding: 5px;
     list-style: none;
 }
 
-.category__product {
-    display: none;
+
+.category__product:hover {
+    cursor: pointer;
+    background-color: green;
+    color: white;
 }
+
+.category__products .show {
+    display: block;
+}
+
 
 .productDatabase::-webkit-scrollbar {
     width: 6px;
