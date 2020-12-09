@@ -11,7 +11,24 @@ const popUpSearch = document.querySelector('.popUp__search');
 const form = document.querySelector('.search__form');
 const fieldToSearchProduct = document.querySelector('.search__form--input');
 const catalogButton = document.querySelector('.catalog__button');
-const productDatabase = document.querySelector('.productDatabase')
+const productDatabase = document.querySelector('.productDatabase');
+const categoryProducts = document.querySelectorAll('.category__productsTitle');
+const categoryProductsShowed = document.querySelectorAll('.category__products');
+// const arrows = document.querySelectorAll('.fas.fa-arrow-up');
+
+
+categoryProducts.forEach(function(categoryProduct) {
+    categoryProduct.addEventListener('click', function() {
+        categoryProducts.forEach(function(categoryProduct) {
+            categoryProduct.classList.remove('show');
+            console.log('zabrało')
+        })
+        categoryProduct.classList.add('show');
+        console.log('dodało')
+       
+    })
+})
+
 const ActivePopUp = () => {
     popUp.classList.add('active');
     WindowPopUp.classList.add('active');
@@ -29,8 +46,10 @@ const ClosePopUp = () => {
 };
 
 const showCatalogProducts = () => {
-    productDatabase.classList.toggle('showed')
-}
+    productDatabase.classList.toggle('showed');
+    categoryProducts.forEach(function(categoryProduct) {
+        categoryProduct.classList.remove('show');
+})};
 
 const searchProduct = fieldToSearchProduct.value;
 
